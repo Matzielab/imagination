@@ -1,11 +1,11 @@
 /**
  * imagination
  * by Matzielab.com
- * 
+ *
  * This fancy, smancy, hocus, pocus, yummy piece of code was created by Mathias Eriksson.
  * Feel free to use it on your sites but you can in no way use it to make money,
  * in that case i want some of that money because i need to eat too. Maybe we could even eat together!
- * 
+ *
  * If you decide to use this, tell me about it! I'd love to see how you put this to use.
  * Also shout out to Matzielab if you feel like it, or not it's up to your pretty face.
  *
@@ -13,7 +13,7 @@
  * Matzie
  */
 
-function imagine(element, cssAttr)
+var Matzielab_Imagine = function(element, cssAttr)
 {
 	var b = 1;
 	var state = "up"
@@ -32,7 +32,7 @@ function imagine(element, cssAttr)
 		{
 			b--;
 		}
-		else if(b > 255 && state == "up")
+		else if(b >= 255 && state == "up")
 		{
 			b = 255;
 			state = "down";
@@ -45,4 +45,4 @@ function imagine(element, cssAttr)
 
 		$(element).css(cssAttr, 'rgb('+r+','+g+','+b+')');
 	});
-}
+};
